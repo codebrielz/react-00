@@ -1,20 +1,22 @@
+import { LazyPage, LazyPage2, LazyPage3 } from "../01-lazyload/pages";
+
 export const navRoutes = [
     {
-        to: '/home',
-        name: 'Home',
-        path: "home",
-        element: (<h1>Home</h1>)
+        to: '/lazy1',
+        name: 'Lazy1',
+        path: "lazy1",
+        element: (<LazyPage />)
     },
     {
-        to: '/about',
-        name: 'About',
-        path: "about",
-        element: (<h1>About</h1>)
+        to: '/lazy2',
+        name: 'Lazy2',
+        path: "lazy2",
+        element: (<LazyPage2 />)
     },
     {
-        to: '/users',
-        name: 'Users',
-        path: "users",
-        element: (<h1>Users</h1>)
+        to: '/lazy3',
+        name: 'Lazy3',
+        path: "lazy3",
+        element: (<LazyPage3 />)
     }
 ]

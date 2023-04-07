@@ -13,9 +13,9 @@ const Navigation = () => {
                         <img src={logo} alt="React Logo" />
                         <ul>
                             {
-                                navRoutes.filter((route) => route.name !== 'General').map((route) => (
-                                    <li key={route.name}>
-                                        <NavLink to={route.to} className={({ isActive }) => isActive ? 'nav-active' : ''} >{route.name}</NavLink>
+                                navRoutes.filter((r) => r.name !== 'General').map((r) => (
+                                    <li key={r.name}>
+                                        <NavLink to={r.to} className={({ isActive }) => isActive ? 'nav-active' : ''} >{r.name}</NavLink>
                                     </li>
                                 ))
                             }
@@ -23,11 +23,11 @@ const Navigation = () => {
                     </nav>
                     <Routes>
                         {
-                            navRoutes.map((route) => (
-                                <Route key={route.name} path={route.to} element={route.element} />
+                            navRoutes.map((r) => (
+                                <Route key={r.name} path={r.to} element={r.element} />
                             ))
                         }
-                        <Route path='/*' element={<Navigate to="/home" replace />} />
+                        <Route path='/*' element={<Navigate to="/lazy1" replace />} />
                     </Routes>
                 </div>
             </BrowserRouter>
