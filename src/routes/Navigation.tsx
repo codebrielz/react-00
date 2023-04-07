@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom'
 import logo from '../logo.svg'
-import { navRoutes } from '../helpers/routes'
+import { routes } from './routes'
 
 const Navigation = () => {
 
@@ -13,9 +13,9 @@ const Navigation = () => {
                         <img src={logo} alt="React Logo" />
                         <ul>
                             {
-                                navRoutes.filter((r) => r.name !== 'General').map((r) => (
-                                    <li key={r.name}>
-                                        <NavLink to={r.to} className={({ isActive }) => isActive ? 'nav-active' : ''} >{r.name}</NavLink>
+                                routes.map(({ to, name }) => (
+                                    <li key={to}>
+                                        <NavLink to={to} className={({ isActive }) => isActive ? 'nav-active' : ''} >{name}</NavLink>
                                     </li>
                                 ))
                             }
@@ -23,11 +23,11 @@ const Navigation = () => {
                     </nav>
                     <Routes>
                         {
-                            navRoutes.map((r) => (
-                                <Route key={r.name} path={r.to} element={r.element} />
+                            routes.map(({ to, Component }) => (
+                                <Route key={to} path={to} element={<Component />} />
                             ))
                         }
-                        <Route path='/*' element={<Navigate to="/lazy1" replace />} />
+                        <Route path='/*' element={<Navigate to={ routes[0].to } replace />} />
                     </Routes>
                 </div>
             </BrowserRouter>
