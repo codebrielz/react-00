@@ -27,7 +27,7 @@ const Navigation = () => {
                                 <Route key={r.name} path={r.to} element={r.element} />
                             ))
                         }
-                        <Route path='/*' element={<Navigate to="/lazy1" replace />} />
+                        <Route path='/*' element={<Navigate to="/home" replace />} />
                     </Routes>
                 </div>
             </BrowserRouter>
