@@ -1,10 +1,11 @@
+import ShoppingPage from "../02-components-patterns/pages/ShoppingPage";
 
 export const navRoutes = [
     {
-        to: '/home',
-        name: 'Home',
-        path: "home",
-        element: (<h1>Home</h1>)
+        to: '/shopping',
+        name: 'Shopping',
+        path: "shopping",
+        element: (<ShoppingPage />)
     },
     {
         to: '/about',
