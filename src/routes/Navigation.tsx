@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom'
 import logo from '../logo.svg'
-import { navRoutes } from '../helpers/routes'
+import { navRoutes } from './routes'
 
 const Navigation = () => {
 
