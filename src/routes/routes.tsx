@@ -5,18 +5,18 @@ export const navRoutes = [
         to: '/shopping',
         name: 'Shopping',
         path: "shopping",
-        element: (<ShoppingPage />)
+        Element: <ShoppingPage />
     },
     {
         to: '/about',
         name: 'About',
         path: "about",
-        element: (<h1>About</h1>)
+        Element: (<h1>About</h1>)
     },
     {
         to: '/users',
         name: 'Users',
         path: "users",
-        element: (<h1>Users</h1>)
+        Element: (<h1>Users</h1>)
     }
 ]
