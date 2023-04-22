@@ -23,3 +23,8 @@ export interface ProductCardHOCProps {
     Image: ({ image, className }: ImageProps) => JSX.Element;
     Title: ({ title, className }: TitleProps) => JSX.Element;
 }
+
+export interface onChangeArgs {
+    producto: Product;
+    count: number;
+}

@@ -1,3 +1,4 @@
+import {CSSProperties} from 'react';
 import { ProductCardHOCProps } from '../interfaces/interfaces';
 import { ProductButtons } from './ProductButtons';
 import { ProductCard as ProductCardHOC } from './ProductCard';
